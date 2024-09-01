@@ -1,0 +1,1430 @@
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(./Assests/Fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(./Assests/Fonts/Poppins/Poppins-Regular.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins-Bold';
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    list-style-type: none;
+}
+:root{
+    --main-color: #D5C455;
+    --bg-color: white;
+    --second-bg-color: #F8F8F8;
+    --text-color-first: #333333;
+    --text-color-second: #222222;
+    --border-color: #1111114f;
+    --box-shadow: #8a8147;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+span{
+    color: var(--main-color);
+}
+.btn{
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: .1rem;
+    font-size: 1.5rem;
+    color: var(--text-color-second);
+    transition: .1s ease;
+    border: .1rem solid transparent;
+}
+.btn:hover{
+    color: var(--main-color);
+    background-color: transparent;
+    border: .1rem solid var(--main-color);
+    border-radius: .1rem;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--text-color-first);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.logo a{
+    color: var(--bg-color);
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    font-size: 1.7rem;
+    color: var(--bg-color);
+    margin-left: 5rem;
+    transition: .3s;
+    text-align: center;
+    justify-content: center;
+}
+ul li ul.dropdown li{
+    display: block;
+}
+ul li ul.dropdown{
+    width: 100%;
+    background-color: var(--text-color-first);
+    color: var(--bg-color);
+    border: .1rem solid var(--border-color);
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover,
+ul li a.active{
+    color: var(--main-color);
+}
+ul li:hover ul.dropdown{
+    display: block;
+    position: absolute;
+    left: 20px;
+    width: 110px;
+}
+ul li:hover ul.dropdown a{
+    color: var(--bg-color);
+    margin: 0;
+    border: .1px solid var(--border-color);
+    padding: 10px 2px;
+    width: 100%;
+    font-size: 1.5rem;
+}
+ul li:hover ul.dropdown a:hover{
+    background-color: var(--main-color);
+    border: .1px solid var(--border-color);
+}
+header nav #toggle{
+   display: inline-block;
+   font-size: 1.7rem;
+   color: var(--bg-color);
+   cursor: pointer;
+}
+header nav #toggle:hover{
+    color: var(--main-color);
+}
+
+
+
+
+/* home section design by Malik Muhammad Umair  */
+
+
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.home .home-first-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+}
+.home .home-first-container .home-content-box{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--main-color);
+    float: left;
+    height: 100%;
+    width: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px var(--text-color-second);
+    margin-right: 2rem;
+    z-index: 12;
+}
+.home-img{
+    width: 30vw;
+    height: 450px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color) ;
+    position: absolute;
+    top: 85px;
+    left: 80px;
+    box-shadow: 5px 5px 10px var(--text-color-second);
+    background-color: var(--main-color);
+    z-index: 9;
+}
+.home-img-hider{
+    width: 300px;
+    height: 550px;
+    background-color: var(--main-color);
+    z-index: -2;
+    position: absolute;
+    left: -33px;
+    top: -70px;
+}
+.home-img img{
+   width: 100%;
+   border-radius: 50%;
+   width: 30vw;
+   height: 450px;
+   object-fit: cover;
+   background-color: var(--main-color);
+}
+.home-content-second-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+.home-content-second-box .home-content{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 550px;
+    top: 80px;
+}
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: 50px;
+
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: var(--main-color);
+}
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home-content p{
+    font-size: 1.6rem;
+    font-family: Poppins-Regular;
+    max-width: 500px;
+    margin-left: 50px;
+}
+.home-content .social-media-icon-box{
+    display: flex;
+    position: absolute;
+    top: 470px;
+    left: -500px;
+    z-index: 500;
+}
+.home-content .social-media-icon-box a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--text-color-first);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--text-color-second);
+    margin: .3rem ;
+    transition: .5s ease;
+}
+.home-content .social-media-icon-box a:hover{
+    background: var(--text-color-second);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--text-color-first)
+}
+#home-btn{
+    position: relative;
+    top: 120px;
+    left: -320px;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: .1rem;
+    font-size: 1.5rem;
+    color: var(--text-color-second);
+    transition: .1s ease;
+    border: .1rem solid transparent;
+}
+#home-btn:hover{
+    color: var(--main-color);
+    background-color: transparent;
+    border: .1rem solid var(--main-color);
+    border-radius: .1rem;
+}
+
+
+
+/* about section design by Malik Muhammad Umair  */
+
+
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.about-img img{
+    width: 25vw;
+    border-radius: 250px;
+    border: 2px solid var(--main-color);
+    box-shadow: 5px 5px 15px var(--main-color);
+    margin-right: 20px;
+}
+.about-content{
+    position: relative;
+    left: 60px;
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    font-family: Poppins-Regular;
+    max-width: 600px;
+}
+.complete-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--bg-color);
+    flex-wrap: wrap;
+}
+
+.complete-details h2{
+    text-align: center;
+    font-size: 4.5rem;
+    margin-left: 3rem;
+    margin-top: -.7rem;
+}
+table{
+    position: relative;
+    left: 0;
+    top: -20px;
+}
+table tr th{
+    padding: 10px 20px ;
+    border: 0.1rem solid var(--text-color-second);
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    font-size: 1.3rem;
+    box-shadow: inset 0 0 .2rem var(--text-color-second);
+} 
+table tr td{
+    padding: 10px 20px ;
+    border: 0.1rem solid var(--text-color-second);
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+
+
+/* footer section design by Malik Muhammad Umair  */
+
+footer{
+    background-color: var(--text-color-second);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+footer .footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px;
+}
+footer .footer-content{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-between;
+}
+footer .footer-heading{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+    margin-bottom: 10px;
+}
+footer  .footer-item h4{
+    font-size: 1.3rem;
+    color: var(--second-bg-color);
+    margin-bottom: 15px;
+}
+footer .footer-item a{
+    font-size: 1.3rem;
+    color: var(--second-bg-color);
+    margin-bottom: 10px;
+}
+footer .footer-item .solid-icon{
+    position: absolute;
+}
+footer .footer-item h4{
+    position: relative;
+    left: 30px;
+}
+footer .footer-item-icon{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+footer .copyright-container{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--second-bg-color);
+}
+footer .social-media-icon-box a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: .3rem ;
+    transition: .5s ease;
+}
+footer .social-media-icon-box a:hover{
+    background-color: var(--main-color);
+    color: var(--text-color-second);
+    box-shadow: 0 0 1.5rem var(--main-color);
+}
+.footer-third-box .soical-media-heading{
+    text-align: center;
+    margin-bottom: 80px;
+}
+footer .footer-second-box .footer-item a:hover{
+    color: var(--main-color);
+}
+footer .footer-first-box .footer-item a:hover{
+    cursor: default;
+}
+
+
+
+
+
+/* services section design by Malik Muhammad Umair  */
+
+.services{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.services h2{
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: -2rem;
+}
+.services-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.services-container .services-box{
+    width: 300px;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 5px;
+    text-align: center;
+    border: .2rem solid var(--main-color);
+    transition: .5s ease;
+    margin-top: -1rem;
+}
+.services-container .services-box:hover{
+    transform: scale(1.02);
+    border-color: var(--main-color);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+.services-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+.services-box h3{
+    font-size: 2.6rem;
+}
+.services-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    font-family: Poppins-Regular;
+}
+
+
+
+
+/* projects section design by Malik Muhammad Umair  */
+
+.projects{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+.detailed-section-projects{
+    background: var(--second-bg-color);
+}
+.projects h2{
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: -2rem;
+}
+.projects-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.card{
+    background-color: var(--second-bg-color);
+    width: 300px;
+    padding: 5px 3px;
+    border-radius: 5px;
+    line-height: 1.5;
+    /* position: absolute; */
+    overflow: hidden;
+    border: .2rem solid var(--main-color);
+    text-align: center;
+    transition: .5s ease;
+}
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 2rem var(--main-color);
+    border-color: var(--main-color);
+}
+.img-container{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    top: -20px;
+    left: -3px;
+    margin-bottom: 55px;
+    border-radius: 5px;
+}
+.img-container img{
+    width: 100%;
+}
+#ch{
+    display: none;
+}
+#ch:checked ~ .content{
+    display: block;
+}
+#ch:checked ~ label{
+    display: none;
+}
+#ch2{
+    display: none;
+}
+#ch2:checked ~ .content{
+    display: block;
+}
+#ch2:checked ~ label{
+    display: none;
+}
+#ch3{
+    display: none;
+}
+#ch3:checked ~ .content{
+    display: block;
+}
+#ch3:checked ~ label{
+    display: none;
+}
+#ch4{
+    display: none;
+}
+#ch4:checked ~ .content{
+    display: block;
+}
+#ch4:checked ~ label{
+    display: none;
+}
+#ch5{
+    display: none;
+}
+#ch5:checked ~ .content{
+    display: block;
+}
+#ch5:checked ~ label{
+    display: none;
+}
+#ch6{
+    display: none;
+}
+#ch6:checked ~ .content{
+    display: block;
+}
+#ch6:checked ~ label{
+    display: none;
+}
+.content{
+    display: none;
+}
+.card p{
+    font-size: 1.3rem;
+    margin: 1px;
+    font-family: Poppins-Regular;
+    position: relative;
+    top: -5.5rem;
+}
+.card h3{
+    font-size: 2.6rem;
+    position: relative;
+    top: -6rem;
+}
+.projects .card .projects-btn{
+    position: relative;
+    top: -3rem;
+    margin-bottom: 0px;
+}
+
+
+
+
+/* education section design by Malik Muhammad Umair  */
+
+.education h2{
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: -2rem;
+}
+.education-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.education-container .education-box{
+   width: 300px;
+    background: var(--second-bg-color);
+    padding:1rem;
+    border-radius: 5px;
+    text-align: center;
+    border: .2rem solid var(--main-color);
+    transition: .5s ease;
+    margin-top: -1.5rem;
+    overflow: hidden;
+}
+.education-container .education-box:hover{
+    transform: scale(1.02);
+    border-color: var(--main-color);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+.education-container .education-box .education-img-box{
+    width: 300px;
+    position: relative;
+    top: -1rem;
+    left: -1rem;
+}
+.education-container .education-box .education-img-box img{
+    width: 100%;
+}
+.education-box h3{
+    font-size: 2rem;
+}
+.education-box p{
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    font-family: Poppins-Regular;
+}
+.education-box-btn{
+    position: relative;
+    bottom: 1.5rem;
+}
+
+
+
+
+
+/* certificate section design by Malik Muhammad Umair  */
+
+
+.certificates{
+    background: var(--second-bg-color);
+}
+.certificates h2{
+    margin-bottom: 2rem;
+}
+.certificates-container{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+.certificates-container .certificates-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+.certificates-box img{
+    width: 100%;
+}
+.certificates-box:hover img{
+    transform: scale(1.1);
+    transition: .3s ease;
+}
+.certificates-box .certificates-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.certificates-box:hover .certificates-layer{
+    transform: translateY(0);
+}
+.certificates-layer h4{
+    font-size: 3rem;
+}
+.certificates-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+    font-family: Poppins-Light;
+}
+.certificates-layer a{
+    display: inline-flex;
+    width: 5rem;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.certificates-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+
+
+
+/* wmsc section design by Malik Muhammad Umair  */
+
+.wmsc{
+    display: grid;
+    grid-template-columns: 60% 60%;
+    justify-content: center;
+    align-self: center;
+    place-items: center;
+}
+.wmsc .wmsc-left-side{
+    width: 50%;
+}
+.wmsc .wmsc-left-side img{
+    width: 170%;
+    position: relative;
+    left: -12rem;
+    box-shadow: 0 0 15px var(--text-color-second);
+
+}
+.wmsc-right-side{
+    width: 100%;
+    position: relative;
+    left: -2rem;
+}
+.wmsc-right-side h2{
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    text-align: center;
+}
+.wmsc .wmsc-right-side p{
+    font-size: 1.6rem;
+    font-family: Poppins-Regular;
+}
+.wmsc .wmsc-btn{
+    position: relative;
+    top: 3rem;
+}
+
+
+
+
+
+
+
+/* languages section design by Malik Muhammad Umair  */
+
+.languages{
+    display: flex;
+    gap: 8.5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.languages .languages-left-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+}
+.languages .languages-right-box{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.languages .languages-left-box h2{
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: -2rem;
+}
+.languages .languages-right-box h2{
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: -2rem;
+}
+.language-container{
+    width: 100%;
+    background-color: var(--text-color-first);
+    border-radius: 50px;
+    overflow: hidden;
+    height: 7px;
+    position: relative;
+    top: -17px;
+    left: 32px;
+}
+.language{
+    text-align: right;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: var(--main-color);
+    height: 100%;
+}
+.languages-left-box p,
+.languages-right-box p{
+    font-size: 1.6rem;
+    font-family: Poppins-Regular;
+    position: relative;
+    left: -30px;
+}
+.language{
+    text-align: left;
+    padding-left: 5px;  
+}
+.pashto{
+    width: 99%;
+    background-color: var(--main-color);
+    animation: spashto 3s;
+}
+.urdu{
+    width: 95%;
+    background-color: var(--main-color);
+    animation: surdu 4s;
+}
+.english{
+    width: 94%;
+    background-color: var(--main-color);
+    animation: senglish 5s;
+}
+.arabic{
+    width: 83%;
+    background-color: var(--main-color);
+    animation: sarabic 6s;
+}
+.korean{
+    width: 5%;
+    background-color: var(--main-color);
+    animation: skorean 7s;
+}
+.written-pashto{
+    width: 90%;
+    background-color: var(--main-color);
+    animation: wpashto 3s;
+}
+.written-urdu{
+    width: 95%;
+    background-color: var(--main-color);
+    animation: wurdu 4s;
+}
+.written-english{
+    width: 99%;
+    background-color: var(--main-color);
+    animation: wenglish 5s;
+}
+.written-arabic{
+    width: 90%;
+    background-color: var(--main-color);
+    animation: warabic 6s;
+    box-shadow: var(--main-color);
+}
+.written-korean{
+    width: 0%;
+    background-color: var(--main-color);
+    animation: wkorean 7s;
+    box-shadow: var(--main-color);
+}
+.detailed-section-languages{
+    background-color: var(--second-bg-color);
+}
+.detailed-section-languages .detailed-section-languages-btn{
+    margin-top: -5rem;
+}
+
+
+
+/* animation by Malik Muhammad Umair  */
+@keyframes spashto{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 99%;
+    }
+}
+@keyframes surdu{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+@keyframes senglish{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 94%;
+    }
+}
+@keyframes sarabic{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 83%;
+    }
+}
+@keyframes skorean{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 5%;
+    }
+}
+@keyframes wpashto{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes wurdu{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+@keyframes wenglish{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 99%;
+    }
+}
+@keyframes warabic{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes wkorean{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+
+
+
+
+
+/* skills section design by Malik Muhammad Umair  */
+
+.skills{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.skills .left{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    left: 50px;
+
+}
+.skills .left .left-img-box{
+    width: 60%;
+    height: 100%;
+    border-radius: 50%; 
+    border: 2px solid var(--main-color);
+    box-shadow: 5px 5px 15px var(--main-color);
+    overflow: hidden;
+    padding: 0;
+}
+.skills .left .left-img-box img{
+width: 100%;
+margin-bottom: -10px;
+}
+.skills .right{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    position: relative;
+    left: -50px;
+}
+.skills .right h2{
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: -2rem;
+}
+.skill-container{
+    width: 100%;
+    background-color: var(--text-color-first);
+    border-radius: 50px;
+    overflow: hidden;
+    height: 7px;
+    position: relative;
+    top: -17px;
+    left: 92px;
+}
+.skill{
+    text-align: right;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: var(--main-color);
+    height: 100%;
+}
+.right p{
+    font-size: 1.6rem;
+    font-family: Poppins-Regular;
+    position: relative;
+    left: -30px;
+    color: var(--text-color-second);
+}
+.language{
+    text-align: left;
+    padding-left: 5px;  
+}
+.html{
+    width: 97%;
+    background-color: var(--main-color);
+    animation: html 2s;
+}
+.css{
+    width: 95%;
+    background-color: var(--main-color);
+    animation: css 3s;
+}
+.js{
+    width: 3%;
+    background-color: var(--main-color);
+    animation: js 4s;
+}
+.bootstrap{
+    width: 90%;
+    background-color: var(--main-color);
+    animation: bootstrap 5s;
+}
+.react{
+    width: 2%;
+    background-color: var(--main-color);
+    animation: rect 6s;
+}
+.ms-word{
+    width: 87%;
+    background-color: var(--main-color);
+    animation: word 7s;
+}
+.powerpoint{
+   width: 86%;
+   background-color: var(--main-color);
+   animation: powerpoint 8s;
+}
+.ms-excel{
+    width: 76%;
+   background-color: var(--main-color);
+   animation: excel 9s;
+}
+.stenography{
+    width: 93%;
+    background-color: var(--main-color);
+    animation: stenography 10s;
+}
+
+
+
+
+/* animation by Malik Muhammad Umair  */
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 97%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+@keyframes js{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 3%;
+    }
+}
+@keyframes bootstrap{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes react{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 2%;
+    }
+}
+@keyframes word{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 87%;
+    }
+}
+@keyframes powerpoint{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 86%;
+    }
+}
+@keyframes excel{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 76%;
+    }
+}
+@keyframes stenography{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 93%;
+    }
+}
+
+
+
+
+
+
+
+
+/* social-media section design by Malik Muhammad Umair  */
+
+.social-media{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.detailed-section-social-media{
+    background-color: var(--second-bg-color);
+}
+.socialmedia-card {
+    width: 290px;
+    height: 400px;
+    background: var(--second-bg-color);
+    border-radius: 15px;
+    position: relative;
+}
+.socialmedia-card .card-border-top {
+    width: 60%;
+    height: 3%;
+    background: var(--main-color);
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+    z-index: 2; 
+} 
+.socialmedia-card h3 {
+    font-weight: 600;
+    color: var(--text-color-second);
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+    margin-top: 60px;
+    z-index: 2; 
+}
+.socialmedia-card .fb{
+    margin-top: 130px;
+}
+.socialmedia-card .job {
+    font-weight: 400;
+    color: var(--text-color-second);
+    display: block;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 20px;
+    z-index: 2; 
+}
+.socialmedia-card .img {
+    width: 130px;
+    height: 130px;
+    background: transparent;
+    border-radius: 9px;
+    margin: auto;
+    margin-top: 25px;
+    overflow: hidden; 
+    z-index: 2; 
+    border: 2px solid var(--second-bg-color);
+}
+.socialmedia-card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.social-media .cover-img{
+    width: 110%;
+    height: 170px;
+    position: absolute;
+    top: -1.9rem;
+    left: -1.5rem;
+    visibility: visible;
+}
+.social-media .cover-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.social-media .fb-profile-img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    top: 60px;
+    left: -80px;
+}
+.social-media .insta-img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    left: -90px;
+    gap: 10px;
+}
+.social-media .insta-followers{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 100px;
+    top: -10px;
+}
+.social-media .ins-btn{
+    position: relative;
+    top: 20px;
+}
+.social-media .insta-followers .h4{
+    position: relative;
+    top: -55px;
+    font-weight: bold;
+}
+.social-media .insta-followers .p{
+    padding-left: 5px;
+}
+.social-media .socialmedia-card .git-heading{
+    position: relative;
+    top: -150px;
+    left: 50px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.social-media .socialmedia-card .git-heading2{
+    position: relative;
+    top: -220px;
+    left: -0px;
+}
+.social-media .socialmedia-card .git-heading3{
+    position: relative;
+    top: -230px;
+    left: -0px;
+}
+.social-media .socialmedia-card .git-job{
+    margin-top: -160px;
+}
+.social-media .socialmedia-card .tik-img{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+.social-media .socialmedia-card .tik-h{
+    position: relative;
+    top: -100px;
+    font-family: 'Poppins-Regular';
+}
+.social-media .socialmedia-card .tik-f{
+    position: relative;
+    top: 100px;
+    left: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.tik{
+    padding-left: 10px;
+}
+.tik .h4{
+    position: relative;
+    top: -58px;
+    font-size: 13px;
+}
+.social-media .socialmedia-card .tik-job{
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* contact section design by Malik Muhammad Umair  */
+
+.contact h2{
+    margin-bottom: 1.5rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: .8rem;
+    border: .1rem solid var(--text-color-second);
+    box-shadow: 5px 5px  1rem var(--text-color-second);
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+}
+.contact form .btn{
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
